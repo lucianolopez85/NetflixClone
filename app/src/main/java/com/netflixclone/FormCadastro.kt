@@ -14,6 +14,8 @@ class FormCadastro : AppCompatActivity() {
 
     private lateinit var binding: ActivityFormCadastroBinding
 
+    
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

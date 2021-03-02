@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DetalhesFilme"
+        android:background="@color/black_80"
+        >
+
+        <Toolbar
+            android:id="@+id/toolbar_detalhes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black_80"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+
+            />
+
+        <ImageView
+            android:id="@+id/capa_video"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_detalhes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            />
+
+        <ImageView
+            android:id="@+id/play_video"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/play"
+            app:layout_constraintTop_toTopOf="@id/capa_video"
+            app:layout_constraintStart_toStartOf="@id/capa_video"
+            app:layout_constraintEnd_toEndOf="@id/capa_video"
+            app:layout_constraintBottom_toBottomOf="@id/capa_video"
+            />
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Witcher"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/capa_video"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"
+            />
+        <TextView
+            android:id="@+id/texto_witcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/descricao_witcher"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/titulo"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            />
+        <TextView
+            android:id="@+id/texto_witcher_elenco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/descricao_witcher_elenco"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/texto_witcher"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            />
+        <TextView
+            android:id="@+id/texto_mais_filmes_series"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/descricao_mais_filmes_series"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/texto_witcher_elenco"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle_detalhe_outros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/texto_mais_filmes_series"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
